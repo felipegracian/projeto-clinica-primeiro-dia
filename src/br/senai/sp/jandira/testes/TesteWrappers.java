@@ -9,16 +9,16 @@ public class TesteWrappers {
 	public static void main(String[] args) {
 		
 		int a = 5;
-		Integer b = 5;
+		Integer b = 5;//wrap
 		
-		Double x = 2.9;
+		Double x = 2.9;//wrap
 		
 		//-------------------------------------------------------------------------------------------------
 
 		ArrayList<Especialidade> especialidades = new ArrayList<>();
 
-		Especialidade e1 = new Especialidade();
-		e1.setNome("Cardiologia");
+		Especialidade e1 = new Especialidade("Cardiologia");
+		//e1.setNome("Cardiologia");
 		e1.setDescriçao("Cuida do coração");
 		
 		

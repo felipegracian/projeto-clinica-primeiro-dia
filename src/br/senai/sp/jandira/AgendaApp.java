@@ -18,7 +18,7 @@ public class AgendaApp {
 	public static void main(String[] args) {
 		
 		//Criar os objetos
-		PlanoDeSaude planoDeSaude = new PlanoDeSaude();
+		PlanoDeSaude planoDeSaude = new PlanoDeSaude("Unimed");
 		planoDeSaude.setOperadora("Unimed");
 		planoDeSaude.setCategoria("Bronze");
 		planoDeSaude.setNumero("532.231.157");

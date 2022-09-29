@@ -21,6 +21,9 @@ public class TesteObjetos {
 		
 		Especialidade e3 = new Especialidade("Clinico Geral");
 		e3.setDescriçao("Sabe de tudo um pouco");
+                
+                Especialidade e5 = new Especialidade("Pediatra");
+		e5.setDescriçao("cuida das crianças");
 		
 		ArrayList<Especialidade> especialidades = new ArrayList<>();
 		especialidades.add(e1);
@@ -74,6 +77,12 @@ public class TesteObjetos {
 		AgendaApp.main(args);
 		System.out.println("--------------------" + PlanoDeSaude.getQuantidade());
 		
+                
+                //exibir quantidade de especialidades
+                System.out.println(e1.getCodigo() + "--" + e1.getNome());
+                System.out.println(e2.getCodigo() + "--" + e2.getNome());
+                System.out.println(e3.getCodigo() + "--" + e3.getNome());
+                System.out.println(e5.getCodigo() + "--" + e5.getNome());
 	}
 
 }

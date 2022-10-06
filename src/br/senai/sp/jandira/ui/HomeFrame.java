@@ -4,6 +4,8 @@
  */
 package br.senai.sp.jandira.ui;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author 22282790
@@ -15,6 +17,7 @@ public class HomeFrame extends javax.swing.JFrame {
      */
     public HomeFrame() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/br/senai/sp/jandira/imagens/notebook.png")));
     }
 
     /**
@@ -26,57 +29,194 @@ public class HomeFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        labelSistemaDeAgendamentosDeConsultas = new javax.swing.JLabel();
+        buttonAgenda = new javax.swing.JButton();
+        buttonPacientes = new javax.swing.JButton();
+        buttonMedicos = new javax.swing.JButton();
+        buttonEspecialidades = new javax.swing.JButton();
+        buttonPlanosDeSaude = new javax.swing.JButton();
+        buttonSair = new javax.swing.JButton();
+        panelEspecialidades = new javax.swing.JPanel();
+        scrollEspecialidades = new javax.swing.JScrollPane();
+        tableEspecialidades = new javax.swing.JTable();
+        buttonExcluirEspecialidade = new javax.swing.JButton();
+        buttonEditarEspecialidade = new javax.swing.JButton();
+        buttonAdicionarEspecialidade = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sistema de Agendamentos");
+        setResizable(false);
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(null);
 
-        pack();
+        labelSistemaDeAgendamentosDeConsultas.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        labelSistemaDeAgendamentosDeConsultas.setForeground(new java.awt.Color(255, 0, 0));
+        labelSistemaDeAgendamentosDeConsultas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/timetable.png"))); // NOI18N
+        labelSistemaDeAgendamentosDeConsultas.setText("Sistema de Agendamento de Consultas");
+        jPanel1.add(labelSistemaDeAgendamentosDeConsultas);
+        labelSistemaDeAgendamentosDeConsultas.setBounds(20, 20, 650, 60);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 920, 90);
+
+        buttonAgenda.setBackground(new java.awt.Color(204, 204, 204));
+        buttonAgenda.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        buttonAgenda.setForeground(new java.awt.Color(255, 0, 51));
+        buttonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/notebook.png"))); // NOI18N
+        buttonAgenda.setText("Agenda");
+        getContentPane().add(buttonAgenda);
+        buttonAgenda.setBounds(20, 110, 110, 40);
+
+        buttonPacientes.setBackground(new java.awt.Color(204, 204, 204));
+        buttonPacientes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        buttonPacientes.setForeground(new java.awt.Color(255, 0, 51));
+        buttonPacientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/fever.png"))); // NOI18N
+        buttonPacientes.setText("Pacientes");
+        getContentPane().add(buttonPacientes);
+        buttonPacientes.setBounds(140, 110, 120, 40);
+
+        buttonMedicos.setBackground(new java.awt.Color(204, 204, 204));
+        buttonMedicos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        buttonMedicos.setForeground(new java.awt.Color(255, 0, 51));
+        buttonMedicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/doctor.png"))); // NOI18N
+        buttonMedicos.setText("Médicos");
+        buttonMedicos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMedicosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buttonMedicos);
+        buttonMedicos.setBounds(270, 110, 110, 40);
+
+        buttonEspecialidades.setBackground(new java.awt.Color(204, 204, 204));
+        buttonEspecialidades.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        buttonEspecialidades.setForeground(new java.awt.Color(255, 0, 51));
+        buttonEspecialidades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/recompensa.png"))); // NOI18N
+        buttonEspecialidades.setText("Especialidades");
+        buttonEspecialidades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEspecialidadesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buttonEspecialidades);
+        buttonEspecialidades.setBounds(400, 110, 150, 40);
+
+        buttonPlanosDeSaude.setBackground(new java.awt.Color(204, 204, 204));
+        buttonPlanosDeSaude.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        buttonPlanosDeSaude.setForeground(new java.awt.Color(255, 0, 0));
+        buttonPlanosDeSaude.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/planoDeSaude.png"))); // NOI18N
+        buttonPlanosDeSaude.setText("Planos de Sáude");
+        getContentPane().add(buttonPlanosDeSaude);
+        buttonPlanosDeSaude.setBounds(570, 110, 190, 40);
+
+        buttonSair.setBackground(new java.awt.Color(255, 0, 51));
+        buttonSair.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        buttonSair.setForeground(new java.awt.Color(255, 255, 255));
+        buttonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/logout.png"))); // NOI18N
+        buttonSair.setText("Sair");
+        buttonSair.setToolTipText("Sair");
+        getContentPane().add(buttonSair);
+        buttonSair.setBounds(800, 100, 100, 80);
+
+        panelEspecialidades.setBackground(new java.awt.Color(255, 255, 255));
+        panelEspecialidades.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Especialidades Médicas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
+        panelEspecialidades.setLayout(null);
+
+        tableEspecialidades.setBackground(new java.awt.Color(204, 204, 204));
+        tableEspecialidades.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        scrollEspecialidades.setViewportView(tableEspecialidades);
+
+        panelEspecialidades.add(scrollEspecialidades);
+        scrollEspecialidades.setBounds(10, 30, 870, 330);
+
+        buttonExcluirEspecialidade.setBackground(new java.awt.Color(255, 0, 0));
+        buttonExcluirEspecialidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/delete.png"))); // NOI18N
+        buttonExcluirEspecialidade.setToolTipText("Excluir Especialidade");
+        panelEspecialidades.add(buttonExcluirEspecialidade);
+        buttonExcluirEspecialidade.setBounds(670, 370, 60, 50);
+
+        buttonEditarEspecialidade.setBackground(new java.awt.Color(255, 255, 102));
+        buttonEditarEspecialidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/edit.png"))); // NOI18N
+        buttonEditarEspecialidade.setToolTipText("Editar Especialidade");
+        buttonEditarEspecialidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEditarEspecialidadeActionPerformed(evt);
+            }
+        });
+        panelEspecialidades.add(buttonEditarEspecialidade);
+        buttonEditarEspecialidade.setBounds(740, 370, 60, 50);
+
+        buttonAdicionarEspecialidade.setBackground(new java.awt.Color(0, 204, 255));
+        buttonAdicionarEspecialidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/plus.png"))); // NOI18N
+        buttonAdicionarEspecialidade.setToolTipText("Adicionar Especialidade");
+        buttonAdicionarEspecialidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAdicionarEspecialidadeActionPerformed(evt);
+            }
+        });
+        panelEspecialidades.add(buttonAdicionarEspecialidade);
+        buttonAdicionarEspecialidade.setBounds(810, 370, 60, 50);
+
+        getContentPane().add(panelEspecialidades);
+        panelEspecialidades.setBounds(10, 190, 890, 430);
+
+        setSize(new java.awt.Dimension(936, 648));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedicosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonMedicosActionPerformed
+
+    private void buttonEspecialidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEspecialidadesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonEspecialidadesActionPerformed
+
+    private void buttonEditarEspecialidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEditarEspecialidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonEditarEspecialidadeActionPerformed
+
+    private void buttonAdicionarEspecialidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAdicionarEspecialidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonAdicionarEspecialidadeActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new HomeFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonAdicionarEspecialidade;
+    private javax.swing.JButton buttonAgenda;
+    private javax.swing.JButton buttonEditarEspecialidade;
+    private javax.swing.JButton buttonEspecialidades;
+    private javax.swing.JButton buttonExcluirEspecialidade;
+    private javax.swing.JButton buttonMedicos;
+    private javax.swing.JButton buttonPacientes;
+    private javax.swing.JButton buttonPlanosDeSaude;
+    private javax.swing.JButton buttonSair;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelSistemaDeAgendamentosDeConsultas;
+    private javax.swing.JPanel panelEspecialidades;
+    private javax.swing.JScrollPane scrollEspecialidades;
+    private javax.swing.JTable tableEspecialidades;
     // End of variables declaration//GEN-END:variables
+
+    private void preencherTabela() {
+
+        
+    }
+
 }

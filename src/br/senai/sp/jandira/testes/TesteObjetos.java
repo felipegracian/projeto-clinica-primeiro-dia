@@ -11,6 +11,16 @@ public class TesteObjetos {
 
     public static void main(String[] args) {
 
+        int[] a = {1, 2, 3};
+
+        int[] b = {3, 4, 5};
+
+        int[][] c = {
+            {1, 2, 3}, {3, 4, 5}
+        };
+        System.out.println(c[1][1]);
+        System.out.println("--------------------------");
+
         Especialidade e1 = new Especialidade("Cardiologia");
         //e1.setNome("Cardiologia");
         e1.setDescriçao("Cuida do coração");
@@ -39,7 +49,7 @@ public class TesteObjetos {
 
         Especialidade procurada = EspecialidadeDAO.getEspecialidade(101);
         System.out.println("BUSCA---" + procurada.getNome());
-        
+
         System.out.println("UPDATE-----------");
         Especialidade atualizada = new Especialidade();
         atualizada.setNome("Ortopedista Geral");
@@ -47,7 +57,6 @@ public class TesteObjetos {
         EspecialidadeDAO.atualizar(atualizada);
         Especialidade procurada1 = EspecialidadeDAO.getEspecialidade(101);
         System.out.println("BUSCA DO UPDATE____" + procurada1.getNome());
-        
 
         ArrayList<Especialidade> especialidades = new ArrayList<>();
         especialidades.add(e1);
